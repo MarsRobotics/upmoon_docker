@@ -1,13 +1,14 @@
-FROM ros:noetic-robot
+FROM ros:melodic-robot
 
 # Add ROS packages controller_manager joint_state_controller robot_state_publisher
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         git \
-        python3-rpi.gpio \
-        ros-noetic-controller-manager \
-        ros-noetic-joint-state-controller \
-        ros-noetic-robot-state-publisher && \
+        ros-melodic-realsense2-camera \
+        ros-melodic-rtabmap-ros \
+        ros-melodic-controller-manager \
+        ros-melodic-joint-state-controller \
+        ros-melodic-robot-state-publisher && \
     rm -rf /var/lib/apt/lists/*
 
 # create catkin workspace
