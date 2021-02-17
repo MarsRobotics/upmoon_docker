@@ -6,6 +6,7 @@ RUN apt-get update && \
         git \
         ros-melodic-realsense2-camera \
         ros-melodic-rtabmap-ros \
+	ros-melodic-move-base \
         ros-melodic-controller-manager \
         ros-melodic-joint-state-controller \
         ros-melodic-robot-state-publisher && \
