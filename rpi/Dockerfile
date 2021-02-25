@@ -4,11 +4,15 @@ FROM ros:noetic-robot
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         git \
+	python3-pip \
         python3-rpi.gpio \
         ros-noetic-controller-manager \
         ros-noetic-joint-state-controller \
         ros-noetic-robot-state-publisher && \
     rm -rf /var/lib/apt/lists/*
+
+# Install Python packages
+RUN pip3 install pysabertooth PyTrinamic
 
 # create catkin workspace
 RUN mkdir -p ~/catkin_ws/src && \
