@@ -34,3 +34,8 @@ RUN cd ~/catkin_ws/ && \
 # setup environment
 RUN echo 'source "/opt/ros/$ROS_DISTRO/setup.bash"' >> /root/.bashrc
 RUN echo 'source "/root/catkin_ws/devel/setup.bash"' >> /root/.bashrc
+
+COPY ./ros_entrypoint.sh /
+
+ENTRYPOINT ["/ros_entrypoint.sh"]
+CMD ["bash"]
