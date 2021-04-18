@@ -8,7 +8,9 @@ RUN apt-get update && \
         python3-rpi.gpio \
         ros-noetic-controller-manager \
         ros-noetic-joint-state-controller \
-        ros-noetic-robot-state-publisher && \
+        ros-noetic-ros-controllers \
+        ros-noetic-robot-state-publisher \
+        ros-noetic-move-base && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Python packages
